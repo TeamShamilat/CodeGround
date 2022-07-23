@@ -1,2 +1,3 @@
-# CSharpCore
-Core programming concepts in C# language. 
+# CodeGround
+- Core programming concepts in C# language. 
+- Challenges
