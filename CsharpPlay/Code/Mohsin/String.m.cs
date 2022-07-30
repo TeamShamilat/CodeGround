@@ -31,5 +31,33 @@ namespace CsharpPlay.Mohsin
             string actual = CodeMohsinString.ToUpperCase(input);
             Assert.Equal(expected, actual);
         }
+ 
+        [Fact]
+        public void ToUpperCaseFactAsTheory()
+        {
+            var input = "Danyal";
+            var expected = "DANYAL";
+
+            string actual = CodeMohsinString.ToUpperCase(input);
+            Assert.Equal(expected, actual);
+
+            input = "sAna";
+            expected = "SANA";
+
+            actual = CodeMohsinString.ToUpperCase(input);
+            Assert.Equal(expected, actual);
+
+            input = "mohsin";
+            expected = "MOHSIN";
+
+            actual = CodeMohsinString.ToUpperCase(input);
+            Assert.Equal(expected, actual);
+
+            input = "Jibran";
+            expected = "JIBRAN";
+
+            actual = CodeMohsinString.ToUpperCase(input);
+            Assert.Equal(expected, actual);
+        }
     }
 }
