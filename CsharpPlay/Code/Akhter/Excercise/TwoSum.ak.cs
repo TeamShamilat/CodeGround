@@ -1,24 +1,20 @@
-namespace CsharpPlay.Akhtar
+namespace CsharpPlay.Akhtar;
+
+public partial class Excercises_Basic
 {
-    public partial class Excercises_Basic
+    static public int Sum(int first, int second)
     {
-        static public int Sum(int first, int second)
-        {
-            return first + second;
-        }
+        return first + second;
     }
 
-    public partial class CodeAkhtarArrayTests
+    [Theory]
+    [InlineData(4, 5, 9)]
+    [InlineData(5, 5, 10)]
+    [InlineData(8, 12, 20)]
+    [InlineData(12, 12, 24)]
+    public void FindMaxTests(int first, int second, int expected)
     {
-        [Theory]
-        [InlineData(4, 5, 9)]
-        [InlineData(5, 5, 10)]
-        [InlineData(8, 12, 20)]
-        [InlineData(12, 12, 24)]
-        public void FindMaxTests(int first, int second, int expected)
-        {
-            int actual = Excercises_Basic.Sum(first, second);
-            Assert.Equal(expected, actual);
-        }
+        int actual = Excercises_Basic.Sum(first, second);
+        Assert.Equal(expected, actual);
     }
 }
