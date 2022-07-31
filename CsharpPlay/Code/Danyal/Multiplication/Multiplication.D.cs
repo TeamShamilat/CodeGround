@@ -1,30 +1,26 @@
-﻿using System;
+﻿///6.Write a program to print the output of multiplication of three numbers which will be entered by the user. 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CsharpPlay.Code.Danyal.Multiplicast;
+namespace CsharpPlay.Code.Danyal.Multiplication;
 
 public partial class Multiplication
 {
-    static public int Sum(int first , int second)
+    static public int MultiplicationTests(int first , int second,int third )
     {
-        return first * second;
+        return first * second *third;
     }
 
     [Theory]
-    [InlineData(3, 4, 12)]
-    [InlineData(4, 5, 20)]
-    [InlineData(5, 6, 30)]
-    [InlineData(6, 7, 42)]
-    [InlineData(10, 10, 100)]
-    [InlineData(5, 10, 50)]
-    [InlineData(2, 2, 4)]
+    [InlineData(2,3,6,36)]
+  
 
-    public void FindSumtests(int first, int second, int demand)
+    public void FindMulatiplication(int first, int second, int third,int demand)
     {
-        int actual = Multiplication.Sum(first, second);
+        int actual = Multiplication.MultiplicationTests(first, second,third);
         Assert.Equal(demand, actual);
     }
 }
