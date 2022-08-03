@@ -21,10 +21,8 @@ namespace CsharpPlay.Danyal
 
             return max;
         }
-    }
 
-    public partial class CodeDanyalArrayTests
-    {
+
         [Theory]
         [InlineData(new int[] { }, -1)]
         [InlineData(null, -1)]

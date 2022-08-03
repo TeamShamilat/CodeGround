@@ -7,20 +7,18 @@ using System.Threading.Tasks;
 
 namespace CsharpPlay.Code.Danyal.Multiplication;
 
-public partial class Multiplication
+public partial class Mathemathic
 {
-    static public int MultiplicationTests(int first , int second,int third )
+    static public int Multiplication(int first, int second, int third)
     {
-        return first * second *third;
+        return first * second * third;
     }
 
     [Theory]
-    [InlineData(2,3,6,36)]
-  
-
-    public void FindMulatiplication(int first, int second, int third,int demand)
+    [InlineData(2, 3, 6, 36)]
+    public void MultiplicationTests(int first, int second, int third, int demand)
     {
-        int actual = Multiplication.MultiplicationTests(first, second,third);
+        int actual = Mathemathic.Multiplication(first, second, third);
         Assert.Equal(demand, actual);
     }
 }
