@@ -1,11 +1,16 @@
-namespace CsharpPlay.MohsinSwb.Twosum
+/*
+2. Write a program to print the sum of two numbers. 
+
+*/
+
+namespace CsharpPlay.MohsinSwb.BasicProblems
 
 {
     public partial class Twosum
     {
          public int GetSum()
         {
-            int num = 12 + 8;
+             int num = 12 + 8;
              return num;
         }
 
