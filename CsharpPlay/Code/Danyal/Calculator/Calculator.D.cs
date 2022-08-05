@@ -19,12 +19,12 @@ namespace CsharpPlay.Code.Danyal.Calculator;
 
     }
 
-
     public static int Subtruction(int first, int second)
     {
         return first - second;
 
     }
+
     public static int Multiplication(int first, int second)
     {
         return second * first;
@@ -42,7 +42,11 @@ namespace CsharpPlay.Code.Danyal.Calculator;
 
     [Theory]
     [InlineData(25, 4, 29)]
-    public void FindAddTests(int first, int second, int expected)
+    [InlineData(25, 5, 30)]
+    [InlineData(25, 50, 75)]
+    [InlineData(25, 150, 175)]
+    [InlineData(125, 150, 275)]
+    public void AddTests(int first, int second, int expected)
     {
 
         int actual = CalculatorTests.Add(first, second);
