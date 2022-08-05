@@ -1,22 +1,26 @@
-namespace CsharpPlay.MohsinSwb.BasicProblems
+/*
+3. Write a program to print the result of dividing two numbers. 
+*/
+
+namespace CsharpPlay.MohsinSwb.BasicProblems;
+
+public partial class ExerciserBasic
 {
-    public partial class Division
-
+    static public int Division(int number, int divideBy)
     {
-       public int GetDivision()
-       {
-        int num = 36 / 6;
-        return num;
-       }
-        [Fact]
+        return number / divideBy;
+    }
 
-        public void DivisionTest()
-       
-        {
-            int expected =6;
-         Division division = new Division();
-         int actual =division.GetDivision();
-        Assert.Equal(expected,actual);
-        }
+    [Theory]
+    [InlineData(36, 6, 6)]
+    [InlineData(88, 11, 8)]
+    [InlineData(90, 10, 9)]
+    [InlineData(33, 3, 11)]
+    [InlineData(64, 3, 21)]
+    public void DivisionTest(int number, int divideBy, int expected)
+    {
+        int actual = ExerciserBasic.Division(number, divideBy);
+
+        Assert.Equal(expected, actual);
     }
 }
