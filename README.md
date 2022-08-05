@@ -24,4 +24,13 @@ $ git reset --hard
 
 ## Reset soft
 $ git reset --soft 
+
+## Git UI
+$ gitk
+
+# Add all files
+$ git add .
+
+# Commit changes
+$ git commit -m "message"
 ```
