@@ -25,9 +25,7 @@ public partial class ExerciserBasic
 
     [Theory]
     [InlineData(0, "Sunday")]
-    [InlineData(1, "Monday")]
-    [InlineData(10, "Monday")]
-    [InlineData(12, "Monday")]
+    [InlineData(5, "Saturday")]
     static public void GetDayTests(int day, string expected)
     {
         var actual = ExerciserBasic.GetDay(day);
