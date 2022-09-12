@@ -16,15 +16,20 @@ public partial class ExerciserBasic
 {
     static public string GetDay(int day)
     {
-        // TODO: fix out of boundry exceptions.
-        // TODO: hanlde edge cases
         string[] days = { "Sunday", "Monday", "Wednesday", "Thursday", "Friday", "Saturday" };
+        if(day < 0 || day > days.Length)
+        {
+            return string.Empty;
+        }
 
         return days[day];
     }
 
     [Theory]
     [InlineData(0, "Sunday")]
+    [InlineData(1, "Monday")]
+    [InlineData(-10, "")]
+    [InlineData(12, "")]
     [InlineData(5, "Saturday")]
     static public void GetDayTests(int day, string expected)
     {
