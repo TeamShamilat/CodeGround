@@ -54,10 +54,10 @@ public class ProposedInvoice : InvoiceSheetOCP
         return base.GetInvoiceDiscount(amount) - 40;
     }
 }
-public class OpenClosedResponsibility
+public class OpenClosedPrinciple
 {
     [Fact]
-    public void OpenClosedResponsibilityTest()
+    public void OpenClosedPrincipleTest()
     {
         var actual = 50;
         InvoiceSheet invoiceSheet = new InvoiceSheet();
